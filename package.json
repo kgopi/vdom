@@ -1,0 +1,30 @@
+{
+  "name": "vdom",
+  "version": "1.0.0",
+  "description": "Virtual DOM",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --config=webpack.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kgopi/vdom.git"
+  },
+  "keywords": [
+    "virtual",
+    "dom"
+  ],
+  "author": "kgopi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kgopi/vdom/issues"
+  },
+  "homepage": "https://github.com/kgopi/vdom#readme",
+  "devDependencies": {
+    "ts-loader": "^5.1.0",
+    "typescript": "^3.0.3",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8"
+  }
+}
