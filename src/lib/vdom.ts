@@ -1,5 +1,5 @@
-export {default as h} from "./h";
-import {_h} from "./h";
+export {default as g} from "./g";
+import {_g} from "./g";
 
 let vDOM;
 
@@ -7,7 +7,7 @@ function isStateChanged(old, _new){
     return JSON.stringify(old) === JSON.stringify(_new);
 }
 
-function compareAttributes(old:_h, _new:_h){
+function compareAttributes(old:_g, _new:_g){
 
     let attributes2BeAdded = {};
     let attributes2BeRemoved = {};
@@ -35,7 +35,7 @@ function compareChildren(old, _new){
     }
 }
 
-function compareNodes(old:_h, _new: _h, relative?: _h){
+function compareNodes(old:_g, _new: _g, relative?: _g){
     if(old && _new == null){
         old.el.parentElement.removeChild(old.el);
     }else if(old == null && _new){

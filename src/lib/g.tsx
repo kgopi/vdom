@@ -1,17 +1,17 @@
-export class _h {
+export class _g {
 
     public tagName:string;
     public attributes:{};
-    public children:Array<_h>;
+    public children:Array<_g>;
     public el: Node|HTMLElement;
     public textContent:string;
 
-    constructor(tagName: string, attributes={}, children:Array<_h>){
+    constructor(tagName: string, attributes={}, children:Array<_g>){
         this.tagName = tagName;
         this.attributes = attributes;
         this.children = children.map((child:any)=>{
             if(typeof child == "string"){
-                let hInst = new _h("#text", [], []);
+                let hInst = new _g("#text", [], []);
                 hInst.textContent = child;
                 return hInst;
             }
@@ -64,7 +64,7 @@ export class _h {
     }
 
     private renderChildren(){
-        this.children.forEach((child:_h)=>{
+        this.children.forEach((child:_g)=>{
             child.render();
             this.el.appendChild(child.el);
         });
@@ -89,10 +89,8 @@ function flattern(list){
     }, []);
 }
 
-const h = function(tagName, attributes, ...children):_h{
-    children = flattern(children);
-    let vDOM = new _h(tagName, attributes, children);
-    return vDOM;
+const g = function(tagName, attributes, ...children):_g{
+    return new _g(tagName, attributes, flattern(children));
 }
 
-export default h;
+export default g;

@@ -1,4 +1,4 @@
-import {h, app} from './../lib/vdom';
+import {g, app} from './../lib/vdom';
 import View from "./View";
 
 const state = {
