@@ -4,7 +4,7 @@ export default class View{
 
     constructor(state, actions){
         return (<div a="2" b="4">
-            <h1>G DOM playground</h1>
+            <h1>GDom (vitual DOM custom implementation) playground</h1>
             <div onclick={function(){
                 actions.updateList(Math.floor(Math.random()*1000));
             }}>Click to add</div>
