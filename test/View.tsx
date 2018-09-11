@@ -1,4 +1,4 @@
-import {g} from './../lib/vdom';
+import {g} from './../src/vdom';
 
 export default class View{
 
