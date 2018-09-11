@@ -2,8 +2,23 @@ import {h, app} from './../lib/vdom';
 import View from "./View";
 
 const state = {
-    li: [1,2,3,4]
+    list: [1,2,3,4,5]
 }
 
-app(document.querySelector('main'), View, state);
+const actions = {
+    updateList: (state)=>{
+        return (num)=>{
+            state.list.push(num);
+            return {...state};
+        }
+    },
+    removeItem: (state)=>{
+        return (num)=>{
+            state.list.splice(state.list.indexOf(num), 1);
+            return {...state};
+        }
+    }
+}
+
+app(document.querySelector('main'), View, state, actions);
 
